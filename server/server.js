@@ -22,12 +22,7 @@ app.use(helmet({
 }));
 
 // CORS
-app.use(cors({
-  origin: process.env.CLIENT_URL,
-  credentials: true,
-  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(cors());
 
 // Rate limiting
 const limiter = rateLimit({
